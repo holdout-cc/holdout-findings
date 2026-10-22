@@ -1,0 +1,2 @@
+0.0 (1.0, None)
+0.1 (0.0, <StepRewardCategory.ARGUMENT_VALUE_DIFFERENT: 'An argument value in a tool call is different than the expected value'>)

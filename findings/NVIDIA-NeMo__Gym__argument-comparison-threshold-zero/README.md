@@ -15,6 +15,7 @@
 
 - `repro.py`: the reproduction script, exactly as posted in the issue.
 - `output.txt`: the output, as posted in the issue.
+- `output-linux.txt`: Re-run on Ubuntu 24.04 LTS (Linux 6.8), Python 3.12.3, network disabled, at `9240708`.
 
 ## Run
 
