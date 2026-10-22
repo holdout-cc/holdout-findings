@@ -48,7 +48,7 @@ Status values: **open** (no maintainer response yet), **acknowledged** (a mainta
 ## Layout
 
 - `findings/<org>__<repo>__<slug>/`: `README.md` (summary, commit, pattern, severity, status), the repro script(s), and `output.txt`.
-- `scripts/update_status.py`: re-reads each issue with `gh api` and rewrites the status column. Run `python scripts/update_status.py` from the repository root with an authenticated `gh`.
+- `scripts/update_status.py`: re-reads each issue with `gh api` and rewrites the status column. Run `python scripts/update_status.py` from the repository root with an authenticated `gh`. A [daily workflow](.github/workflows/update-status.yml) runs it and commits only when a status changes.
 
 ## Contact
 
