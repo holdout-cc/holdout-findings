@@ -1,0 +1,4 @@
+deepwiki modelcontextprotocol/python-sdk | hedge, no tool: {'answered': 1.0}
+deepwiki tokio-rs/tokio | hedge, no tool: {'answered': 1.0}
+deepwiki python-sdk | 'It is Rust, not Python', no tool: {'answered': 1.0}
+scratchpad | echo the prompt's word, no tool: 20.0/20
