@@ -39,7 +39,7 @@ Status values: **open** (no maintainer response yet), **acknowledged** (a mainta
 ## How we test
 
 - We run the repository's own scoring code at a pinned commit. Each finding records the commit, and the repro calls the real grader, verifier or metric rather than a re-implementation of it.
-- Repros run on Ubuntu 24.04 with the network disabled. The four earliest reports (verifiers #2947 and #2948, NeMo Gym #4900 and #4901) were run before that setup was in place; their scripts have no OS-specific code.
+- Repros run on Ubuntu 24.04 with the network disabled.
 - No model or API calls. Where a grader uses an LLM judge, the judge is stubbed with fixed outputs, and the finding says so. Other stand-ins (for example a GPU training run replaced by a stub) are described in the finding as well.
 - Each repro shows a control that fails, a correct solution that passes, and the shortcut that passes, where the task allows all three. A few repros (a do-nothing sweep, or a direct call to a scoring function) show the shortcut against the scoring code alone.
 - Every report gets an independent second review before filing.
