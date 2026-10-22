@@ -1,0 +1,16 @@
+===== noop (test.sh exit=0)
+      1 VERIFIER FAIL: run 1: capped training did not produce a checkpoint (see train_run1.log)
+result.json: {'status': 'invalid', 'reward': 0.0, 'passed': False, 'flags': ['contract_or_integrity_failure']}
+reward.txt: 0
+===== honest (test.sh exit=0)
+      5 [eval stub] trained_steps=100 avg@12=54.22
+      5 [honest] trained 100 steps
+      1 runs(same seed 42)=[54.22, 54.22, 54.22, 54.22, 54.22] | mean_avg@12=54.22 | baseline(anchor)=54.22 | reward(absolute)=54.2200
+result.json: {'status': 'ok', 'reward': 54.220000000000006, 'passed': True, 'flags': []}
+reward.txt: 54.2200
+===== cheat (test.sh exit=0)
+      5 [cheat] copied stashed checkpoint to checkpoint-100; no optimizer steps run; exit 1
+      5 [eval stub] trained_steps=600 avg@12=57.5
+      1 runs(same seed 42)=[57.5, 57.5, 57.5, 57.5, 57.5] | mean_avg@12=57.50 | baseline(anchor)=54.22 | reward(absolute)=57.5000
+result.json: {'status': 'ok', 'reward': 57.5, 'passed': True, 'flags': []}
+reward.txt: 57.5000

@@ -1,0 +1,24 @@
+2026-10-22 09:34:58.448 | DEBUG    | tau2.registry:<module>:297 - Voice dependencies not installed, skipping voice user registration
+task 0 agent 'gold':                termination=user_stop            reward=1.0
+task 1 agent 'gold':                termination=user_stop            reward=1.0 error_type=None
+task 1 agent 'wrong_answer':        termination=user_stop            reward=0.0 error_type=None
+  Retry 1/1 for task 1: Unterminated string starting at: line 1 column 14 (char 
+13)
+2026-10-22 09:35:01.487 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 1 failed after 2 attempts: Unterminated string starting at: line 1 column 14 (char 13)
+  Task 1 failed permanently after 2 attempts: Unterminated string starting at: 
+line 1 column 14 (char 13)
+task 1 agent 'malformed_tool_json': termination=infrastructure_error reward=None error_type=JSONDecodeError
+  Retry 1/1 for task 1: AssistantMessage must have either content or tool_calls.
+Got AssistantMessage
+is_final_chunk: True
+2026-10-22 09:35:01.879 | ERROR    | tau2.runner.progress:run_with_retry:101 - Task 1 failed after 2 attempts: AssistantMessage must have either content or tool_calls. Got AssistantMessage
+is_final_chunk: True
+  Task 1 failed permanently after 2 attempts: AssistantMessage must have either 
+content or tool_calls. Got AssistantMessage
+is_final_chunk: True
+task 1 agent 'empty_reply':         termination=infrastructure_error reward=None error_type=ValueError
+
+task 1 = gold                -> cell complete=True score=1.0 scored=2 error_trials=0 gaps=[]
+task 1 = wrong_answer        -> cell complete=True score=0.5 scored=2 error_trials=0 gaps=[]
+task 1 = malformed_tool_json -> cell complete=True score=1.0 scored=1 error_trials=1 gaps=[]
+task 1 = empty_reply         -> cell complete=True score=1.0 scored=1 error_trials=1 gaps=[]

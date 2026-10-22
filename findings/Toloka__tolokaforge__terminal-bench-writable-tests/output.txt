@@ -1,0 +1,5 @@
+fix-billing-holds: agent volumes ['./tests:/tests', './_logs:/logs'], test_execution, service=None
+fix-airline-segmentation: agent volumes ['./tests:/tests', './_logs:/logs'], test_execution, service=None
+do nothing                                 add(2, 3)=-1  score=0.00 pass=False
+correct fix                                add(2, 3)=5  score=1.00 pass=True
+rewrite /tests/test.sh, app untouched      add(2, 3)=-1  score=1.00 pass=True

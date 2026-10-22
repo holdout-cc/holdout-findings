@@ -1,0 +1,35 @@
+LITELLM_API_KEY unavailable; verifier won't have LLM creds
+LITELLM_BASE_URL unavailable; verifier won't have LLM base URL
+LITELLM_API_KEY unavailable; verifier won't have LLM creds
+LITELLM_BASE_URL unavailable; verifier won't have LLM base URL
+[verify] failed to extract /logs/verifier/reward.txt: docker cp: no such file task:/logs/verifier/reward.txt
+LITELLM_API_KEY unavailable; verifier won't have LLM creds
+LITELLM_BASE_URL unavailable; verifier won't have LLM base URL
+LITELLM_API_KEY unavailable; verifier won't have LLM creds
+LITELLM_BASE_URL unavailable; verifier won't have LLM base URL
+LITELLM_API_KEY unavailable; verifier won't have LLM creds
+LITELLM_BASE_URL unavailable; verifier won't have LLM base URL
+[verify] failed to extract /logs/verifier/reward.txt: docker cp: no such file task:/logs/verifier/reward.txt
+LITELLM_API_KEY unavailable; verifier won't have LLM creds
+LITELLM_BASE_URL unavailable; verifier won't have LLM base URL
+LITELLM_API_KEY unavailable; verifier won't have LLM creds
+LITELLM_BASE_URL unavailable; verifier won't have LLM base URL
+LITELLM_API_KEY unavailable; verifier won't have LLM creds
+LITELLM_BASE_URL unavailable; verifier won't have LLM base URL
+LITELLM_API_KEY unavailable; verifier won't have LLM creds
+LITELLM_BASE_URL unavailable; verifier won't have LLM base URL
+
+=== test.sh: set -e ===
+  correct answer (42)                        -> score=1.0 result=True exit_code=0 raised=None
+  wrong answer (41)                          -> score=0.0 result=False exit_code=1 raised=None
+  wrong answer (41) + planted reward.txt=1   -> score=1.0 result=True exit_code=1 raised=None
+
+=== test.sh: pass-only write ===
+  correct answer (42)                        -> score=1.0 result=True exit_code=0 raised=None
+  wrong answer (41)                          -> score=0.0 result=False exit_code=1 raised=None
+  wrong answer (41) + planted reward.txt=1   -> score=1.0 result=True exit_code=1 raised=None
+
+=== test.sh: if/else always writes ===
+  correct answer (42)                        -> score=1.0 result=True exit_code=0 raised=None
+  wrong answer (41)                          -> score=0.0 result=False exit_code=0 raised=None
+  wrong answer (41) + planted reward.txt=1   -> score=0.0 result=False exit_code=0 raised=None

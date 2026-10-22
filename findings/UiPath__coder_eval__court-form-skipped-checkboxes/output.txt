@@ -1,0 +1,16 @@
+blank form, unchanged              form fields=155  reward=0  (15 failed, 20 passed, 12 skipped in 1.04s)
+                                    skip reason: No checkbox data could be extracted from PDF
+                                    skip reason: No checkbox data could be extracted from PDF (XFA extraction may not be supported)
+                                    FAILED TestPDFValid::test_output_file_valid
+                                    FAILED TestRequiredContent::test_content_present[plaintiff_name]
+                                    FAILED TestRequiredContent::test_content_present[plaintiff_address]
+                                    ... and 12 more
+correct fill                       form fields=155  reward=1  (47 passed in 0.70s)
+correct fill, Q10 checkbox wrong   form fields=155  reward=0  (1 failed, 46 passed in 0.72s)
+                                    FAILED TestCheckboxes::test_checkbox_value[claim_over_2500_no]
+text fields filled, no checkbox    form fields=155  reward=1  (35 passed, 12 skipped in 0.67s)
+                                    skip reason: No checkbox data could be extracted from PDF
+                                    skip reason: No checkbox data could be extracted from PDF (XFA extraction may not be supported)
+text-only PDF, no form             form fields=  0  reward=1  (35 passed, 12 skipped in 0.27s)
+                                    skip reason: No checkbox data could be extracted from PDF
+                                    skip reason: No checkbox data could be extracted from PDF (XFA extraction may not be supported)

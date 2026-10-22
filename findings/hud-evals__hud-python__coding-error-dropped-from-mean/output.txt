@@ -1,0 +1,10 @@
+flask-4992 golden reward=1.0 is_error=False exit_code=None error=None
+flask-4992 honest reward=0.0 is_error=False exit_code=None error=None
+flask-4992 cheat  reward=0.0 is_error=True exit_code=0 error='test command did not write JUnit XML'
+flask-5063 golden reward=1.0 is_error=False exit_code=None error=None
+flask-5063 honest reward=0.0 is_error=False exit_code=None error=None
+flask-5063 cheat  reward=0.0 is_error=True exit_code=0 error='test command did not write JUnit XML'
+
+Job.reward=0.500 errors=0  [solve flask-4992, fail flask-5063 honestly]
+Job.reward=1.000 errors=1  [solve flask-4992, crash tests on flask-5063]
+Job.reward=1.000 errors=0  [solve both]

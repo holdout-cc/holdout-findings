@@ -1,0 +1,17 @@
+quickstart rubric, weights [1.0, 2.0, 1.0]
+gold workspace, judge writes JSON booleans
+    judge wrote met=[True, True, False] -> recorded [True, True, False]  reward=0.75  exit=0
+empty workspace, judge writes JSON false
+    judge wrote met=[False, False, False] -> recorded [False, False, False]  reward=0.0  exit=0
+empty workspace, judge writes "false" (string)
+    judge wrote met=['false', 'false', 'false'] -> recorded [True, True, True]  reward=1.0  exit=0
+empty workspace, judge writes "no" (string)
+    judge wrote met=['no', 'no', 'no'] -> recorded [True, True, True]  reward=1.0  exit=0
+empty workspace, judge writes "false", mode = "individual"
+    judge wrote met=['false', 'false', 'false'] -> recorded [True, True, True]  reward=1.0  exit=0
+
+tests/fixtures/sample_rubric_with_negatives.json, weights [2.0, 3.0, -1.0]
+penalty not triggered, judge writes JSON false
+    judge wrote met=[True, True, False] -> recorded [True, True, False]  reward=1.0  exit=0
+penalty not triggered, judge writes "false" (string)
+    judge wrote met=[True, True, 'false'] -> recorded [True, True, True]  reward=0.8  exit=0

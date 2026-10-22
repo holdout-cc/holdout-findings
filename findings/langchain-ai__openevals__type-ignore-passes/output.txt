@@ -1,0 +1,13 @@
+output                               pyright  mypy
+correct code                         True     True
+type errors                          False    False
+type errors + '# type: ignore'       True     True
+syntax error                         False    False
+syntax error + '# type: ignore'      True     False
+refusal prose                        False    False
+refusal prose + '# type: ignore'     True     False
+empty string                         True     True
+
+markdown_code_blocks strategy (pyright):
+  refusal, no code block             False
+  refusal + empty ```python block    True

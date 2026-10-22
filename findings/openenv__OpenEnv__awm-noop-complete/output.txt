@@ -1,0 +1,17 @@
+$ PYTHONPATH=src:envs python awm_noop.py
+accounting_finance_1 #0: complete   Create a new customer with specified attributes
+accounting_finance_1 #1: others     Create an invoice for customer 'Acme Coffee Roasters' dated '2025-01-15' for 10 units of p
+accounting_finance_1 #2: complete   Add a new vendor with specified attributes
+accounting_finance_1 #3: complete   Record a new bill from vendor 'Bright Solutions IT' dated '2025-02-01' for invoice #BS-204
+accounting_finance_1 #4: others     Import or fetch all bank feed transactions from 2025-01-01 to 2025-01-31 for the 'Checking
+accounting_finance_1 #5: complete   Create a new non-inventory product/service called 'On-site Consultation (Hourly)' with a d
+accounting_finance_1 #6: others     Set up a recurring invoice schedule for customer 'Northside Fitness' to bill on the 1st of
+accounting_finance_1 #7: others     Record a manual journal entry dated '2025-02-28' to reclassify $1,200 from 'Office Supplie
+accounting_finance_1 #8: others     Generate a 'Profit and Loss' report on an accrual basis for the period 2025-01-01 to 2025-
+accounting_finance_1 #9: complete   Create a bank rule named 'Uber Rides' for the 'Checking Account' that automatically catego
+appointment_scheduling_1 #0: complete   Create a new pet owner profile with specified attributes
+b2b_commerce_1 #0: complete   Create a new part record with SKU 'BRK-TOY-001', manufacturer 'Bosch', part_number '0986AB
+analytics_dashboard_4 #0: complete   Create a new site for my organization named 'Chicago Distribution Center' with address '12
+
+$ python awm_noop.py --all
+{'complete': 1681, 'others': 8317, 'judge_error': 2} tasks: 10000

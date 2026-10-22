@@ -1,0 +1,6 @@
+fixed selection (stubbed ppl 425.59)         status=ok       reward.txt=425.5900
+same selection (stubbed ppl 367.26)          status=ok       reward.txt=367.2600
+no selection.json (agent did nothing)        status=invalid  reward.txt=0.0000
+malformed selection.json                     status=invalid  reward.txt=0.0000
+duplicate ids [0, 0]                         status=invalid  reward.txt=0.0000
+task.toml direction: direction = "lower_better"

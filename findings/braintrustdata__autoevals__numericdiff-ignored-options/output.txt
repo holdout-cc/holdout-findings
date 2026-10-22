@@ -1,0 +1,14 @@
+SCORERS.md examples (documented score vs actual):
+  10.5 vs 10.0, max_diff=1.0    documented 0.5    actual 0.9756
+  10.5 vs 10.0, max_diff=0.01   documented 0.0    actual 0.9756
+  100 vs 110, relative=True     documented ~0.91  actual 0.9524
+  10.5 vs 10.0, no options                        actual 0.9756
+  NumericDiff.partial(max_diff=0.01), 10.5 vs 10.0 actual 0.9756
+
+A tight tolerance, max_diff=0.01 (gold, then wrong answers):
+  expected=2024  output=2024  score=1.0000
+  expected=2024  output=2025  score=0.9998
+  expected=1000  output=999   score=0.9995
+  expected=72    output=70    score=0.9859
+  expected=1000  output=1100  score=0.9524
+  expected=5     output=-5    score=0.0000

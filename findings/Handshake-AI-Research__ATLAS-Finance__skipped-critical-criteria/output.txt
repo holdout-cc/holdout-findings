@@ -1,0 +1,16 @@
+kestrel-env2__task_02, section: Section Z — Final Submission
+  scenario           reward skipped w>=3  passed  fail reasons
+  fully_correct       1.000            0  True    0
+  one_critical_miss   0.987            0  False   1
+  skip_section        0.948            4  True    0
+  blank_workbook      0.000            6  False   39
+
+rookhaven-env9__task_01, section: Section A — Program Accounting & Revenue Recognition
+  scenario           reward skipped w>=3  passed  fail reasons
+  fully_correct       1.000            0  True    0
+  one_critical_miss   0.988            0  False   1
+  skip_section        0.879            6  True    0
+  blank_workbook      0.000           41  True    0
+
+blank workbook, all tasks: tasks=100 mean_reward=0.000 pass@1=0.030
+passing: rookhaven-env9__task_01, rookhaven-env9__task_02, rookhaven-env9__task_06
