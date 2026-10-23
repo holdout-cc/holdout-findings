@@ -5,7 +5,7 @@
 - Environment: judge verdict parsing (`Verdict.from_raw`)
 - Pattern: judge parse default
 - Severity: medium
-- Status: open (as of 2026-10-22)
+- Status: open (as of 2026-10-23)
 
 ## Summary
 

@@ -5,7 +5,8 @@
 - Environment: container unit-test verifier (reward mode)
 - Pattern: planted reward file
 - Severity: medium
-- Status: open (as of 2026-10-22)
+- Status: fixed (as of 2026-10-23)
+- Fix: [scaleapi/agentenv-framework#310](https://github.com/scaleapi/agentenv-framework/pull/310), merged 2026-10-23. The verifier now deletes the reward file before running.
 
 ## Summary
 
