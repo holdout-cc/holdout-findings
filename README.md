@@ -8,8 +8,6 @@ Status as of 2026-10-23: 22 open, 0 acknowledged, 1 fixed, 0 closed.
 
 Numbers in the bug pattern column link to the matching entry in [reward-hack-patterns](https://github.com/holdout-cc/reward-hack-patterns), which explains each pattern with a runnable example and a fix.
 
-Numbers in the bug pattern column link to the matching entry in [reward-hack-patterns](https://github.com/holdout-cc/reward-hack-patterns), which explains each pattern with a runnable example and a fix.
-
 | Org/repo | Environment | Bug pattern | Severity | Issue | Status |
 |---|---|---|---|---|---|
 | braintrustdata/autoevals | [NumericDiff (Python and JS)](findings/braintrustdata__autoevals__numericdiff-ignored-options/) | documented options ignored ([04](https://github.com/holdout-cc/reward-hack-patterns/tree/main/patterns/04-loose-similarity-thresholds), [13](https://github.com/holdout-cc/reward-hack-patterns/tree/main/patterns/13-ignored-options)) | medium | [#251](https://github.com/braintrustdata/autoevals/issues/251) | open |
