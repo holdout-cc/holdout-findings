@@ -4,7 +4,7 @@ Holdout audits RL environments and agent benchmarks for reward hacks and grader 
 
 ## Findings
 
-Status as of 2026-10-23: 22 open, 0 acknowledged, 1 fixed, 0 closed.
+Status as of 2026-10-24: 20 open, 2 acknowledged, 1 fixed, 0 closed.
 
 Numbers in the bug pattern column link to the matching entry in [reward-hack-patterns](https://github.com/holdout-cc/reward-hack-patterns), which explains each pattern with a runnable example and a fix.
 
@@ -18,8 +18,8 @@ Numbers in the bug pattern column link to the matching entry in [reward-hack-pat
 | hud-evals/hud-python | [coding environment / `Job.reward`](findings/hud-evals__hud-python__coding-error-dropped-from-mean/) | errors dropped from mean ([09](https://github.com/holdout-cc/reward-hack-patterns/tree/main/patterns/09-errors-dropped-from-aggregate)) | medium | [#737](https://github.com/hud-evals/hud-python/issues/737) | open |
 | langchain-ai/openevals | [pyright / mypy code evaluators](findings/langchain-ai__openevals__type-ignore-passes/) | suppression comment passes ([15](https://github.com/holdout-cc/reward-hack-patterns/tree/main/patterns/15-submission-disables-checker)) | medium | [#290](https://github.com/langchain-ai/openevals/issues/290) | open |
 | METR/inspect-agents | [`reward_hacking_scanner` over `metr_agents` transcripts](findings/METR__inspect-agents__scanner-misses-trimmed-history/) | judge sees trimmed history ([16](https://github.com/holdout-cc/reward-hack-patterns/tree/main/patterns/16-incomplete-evidence)) | high | [#136](https://github.com/METR/inspect-agents/issues/136) | open |
-| NVIDIA-NeMo/Gym | [single_step_tool_use_with_argument_comparison (SWE/Droid pivot configs)](findings/NVIDIA-NeMo__Gym__argument-comparison-threshold-zero/) | fuzzy match threshold 0 ([04](https://github.com/holdout-cc/reward-hack-patterns/tree/main/patterns/04-loose-similarity-thresholds)) | high | [#4900](https://github.com/NVIDIA-NeMo/Gym/issues/4900) | open |
-| NVIDIA-NeMo/Gym | [scicode](findings/NVIDIA-NeMo__Gym__scicode-systemexit/) | early exit passes ([07](https://github.com/holdout-cc/reward-hack-patterns/tree/main/patterns/07-exit-code-only)) | high | [#4901](https://github.com/NVIDIA-NeMo/Gym/issues/4901) | open |
+| NVIDIA-NeMo/Gym | [single_step_tool_use_with_argument_comparison (SWE/Droid pivot configs)](findings/NVIDIA-NeMo__Gym__argument-comparison-threshold-zero/) | fuzzy match threshold 0 ([04](https://github.com/holdout-cc/reward-hack-patterns/tree/main/patterns/04-loose-similarity-thresholds)) | high | [#4900](https://github.com/NVIDIA-NeMo/Gym/issues/4900) | acknowledged |
+| NVIDIA-NeMo/Gym | [scicode](findings/NVIDIA-NeMo__Gym__scicode-systemexit/) | early exit passes ([07](https://github.com/holdout-cc/reward-hack-patterns/tree/main/patterns/07-exit-code-only)) | high | [#4901](https://github.com/NVIDIA-NeMo/Gym/issues/4901) | acknowledged |
 | openai/human-eval | [HumanEval execution harness](findings/openai__human-eval__decorator-replaces-check/) | harness override ([15](https://github.com/holdout-cc/reward-hack-patterns/tree/main/patterns/15-submission-disables-checker)) | high | [#71](https://github.com/openai/human-eval/issues/71) | open |
 | openenv/OpenEnv | [agent_world_model_env](findings/openenv__OpenEnv__awm-noop-complete/) | do-nothing pass ([01](https://github.com/holdout-cc/reward-hack-patterns/tree/main/patterns/01-do-nothing-passes)) | high | [#1475](https://github.com/openenv/OpenEnv/issues/1475) | open |
 | ORO-AI/assistanteval | [battery-size-known](findings/ORO-AI__assistanteval__battery-wrong-pack/) | purchase not checked ([16](https://github.com/holdout-cc/reward-hack-patterns/tree/main/patterns/16-incomplete-evidence)) | high | [#6](https://github.com/ORO-AI/assistanteval/issues/6) | open |

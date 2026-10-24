@@ -5,7 +5,7 @@
 - Environment: examples/native/coding
 - Pattern: substring match
 - Severity: high
-- Status: open (as of 2026-10-23)
+- Status: open (as of 2026-10-24)
 
 ## Summary
 

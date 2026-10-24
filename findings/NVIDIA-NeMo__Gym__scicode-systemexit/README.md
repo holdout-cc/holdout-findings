@@ -5,7 +5,7 @@
 - Environment: scicode
 - Pattern: early exit passes
 - Severity: high
-- Status: open (as of 2026-10-23)
+- Status: acknowledged (as of 2026-10-24)
 
 ## Summary
 

@@ -5,7 +5,7 @@
 - Environment: samples/nano-gpt-data-curation
 - Pattern: failure scores best
 - Severity: medium
-- Status: open (as of 2026-10-23)
+- Status: open (as of 2026-10-24)
 
 ## Summary
 
