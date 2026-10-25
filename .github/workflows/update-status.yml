@@ -29,9 +29,21 @@ jobs:
         shell: python
         run: |
           # Everything the script writes is derived from findings.json plus today's date,
-          # so compare findings.json with the committed copy, ignoring generated_at.
+          # so compare findings.json with the committed copy, ignoring generated_at, and
+          # check the READMEs for corrections other than dates.
           # Commit on any real change, or when the committed date is a week old or more.
-          import datetime, json, os, subprocess
+          import datetime, json, os, re, subprocess
+
+          def text_changed():
+              # A README or finding status line the script corrected without any change to
+              # findings.json (for example after a hand edit) still needs committing.
+              # Dates alone don't count; they follow the weekly rule below.
+              diff = subprocess.run(["git", "diff", "-U0", "--", "README.md", "findings"],
+                                    capture_output=True, text=True).stdout
+              strip = lambda line: re.sub(r"\d{4}-\d{2}-\d{2}", "", line[1:])
+              minus = sorted(strip(l) for l in diff.splitlines() if l.startswith("-") and not l.startswith("---"))
+              plus = sorted(strip(l) for l in diff.splitlines() if l.startswith("+") and not l.startswith("+++"))
+              return minus != plus
 
           def load(text):
               data = json.loads(text)
@@ -43,7 +55,7 @@ jobs:
               action = "changed"
           else:
               old, old_date = load(shown.stdout)
-              if old != new:
+              if old != new or text_changed():
                   action = "changed"
               elif not old_date or (datetime.date.fromisoformat(new_date)
                                     - datetime.date.fromisoformat(old_date)).days >= 7:
