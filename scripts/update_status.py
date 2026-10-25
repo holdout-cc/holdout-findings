@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Refresh findings.json from GitHub and regenerate everything derived from it.
 
-findings.json is the single source of truth for the filed issues. One run:
+findings.json is the source for published issue metadata and the generated pages; issues.txt is the
+intake list for new issue URLs. One run:
 
   1. reads findings.json and issues.txt (one issue URL per line);
   2. adds a stub record, flagged `needs_writeup`, for any URL in issues.txt
