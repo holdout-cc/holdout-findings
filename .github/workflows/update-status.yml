@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-status
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -16,18 +20,48 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Refresh statuses
+      - name: Refresh findings.json and the READMEs
         env:
           GH_TOKEN: ${{ github.token }}
         run: python scripts/update_status.py
-      - name: Commit if a status changed
+      - name: Decide whether to commit
+        id: decide
+        shell: python
         run: |
-          # The script always rewrites the "Status as of" date; only commit real status changes.
-          if git diff -U0 | grep -E '^[-+][^-+]' | grep -qv 'Status as of'; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -am "Update issue status"
-            git push
+          # Everything the script writes is derived from findings.json plus today's date,
+          # so compare findings.json with the committed copy, ignoring generated_at.
+          # Commit on any real change, or when the committed date is a week old or more.
+          import datetime, json, os, subprocess
+
+          def load(text):
+              data = json.loads(text)
+              return data, data.pop("generated_at", "")[:10]
+
+          new, new_date = load(open("findings.json", encoding="utf-8").read())
+          shown = subprocess.run(["git", "show", "HEAD:findings.json"], capture_output=True, text=True)
+          if shown.returncode:
+              action = "changed"
+          else:
+              old, old_date = load(shown.stdout)
+              if old != new:
+                  action = "changed"
+              elif not old_date or (datetime.date.fromisoformat(new_date)
+                                    - datetime.date.fromisoformat(old_date)).days >= 7:
+                  action = "weekly"
+              else:
+                  action = "none"
+          print(f"commit: {action}")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write(f"action={action}\n")
+      - name: Commit
+        if: steps.decide.outputs.action != 'none'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add findings.json README.md findings
+          if [ "${{ steps.decide.outputs.action }}" = "changed" ]; then
+            git commit -m "Update issue status"
           else
-            git checkout -- .
+            git commit -m "Refresh status date"
           fi
+          git push

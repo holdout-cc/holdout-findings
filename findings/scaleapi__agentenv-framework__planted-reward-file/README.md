@@ -5,8 +5,8 @@
 - Environment: container unit-test verifier (reward mode)
 - Pattern: planted reward file
 - Severity: medium
-- Status: fixed (as of 2026-10-24)
-- Fix: [scaleapi/agentenv-framework#310](https://github.com/scaleapi/agentenv-framework/pull/310), merged 2026-10-23. The verifier now deletes the reward file before running.
+- Status (as of 2026-10-25): fixed; fix PR [#310](https://github.com/scaleapi/agentenv-framework/pull/310) (community, merged)
+- Fix: [#310](https://github.com/scaleapi/agentenv-framework/pull/310) by salma2vec, merged 2026-10-23. Before merging, a Scale engineer revised it to clear only the reward file; our [review](https://github.com/scaleapi/agentenv-framework/pull/310#issuecomment-6354173322) the same day raised the same point: the first version cleared every result file, which breaks verifiers that read files written during the run.
 
 ## Summary
 

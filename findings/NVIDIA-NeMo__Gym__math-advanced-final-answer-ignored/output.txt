@@ -1,0 +1,11 @@
+$ git rev-parse HEAD
+754c2f6c3b074eb4842a35cad38e51adf255c640
+$ python repro.py
+prompt:       Get me the values for (9.0 - 9.0), (1.0 / 1.0), (1.0 * 9.0), and sin(5.0) using only the given tools.
+ground_truth: [-3.0, 0.5, 9.9, 0.28366218546322625]
+right tools, reports tool results                    reward=1.0
+right tools, reports ordinary-math values            reward=1.0
+right tools, quotes results then replaces them       reward=1.0
+right tools, no final answer                         reward=1.0
+control: no tool calls, no answer                    reward=0.0
+control: ordinary-math values via return_constant    reward=0.0

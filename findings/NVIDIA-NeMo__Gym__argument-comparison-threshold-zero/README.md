@@ -5,7 +5,7 @@
 - Environment: single_step_tool_use_with_argument_comparison (SWE/Droid pivot configs)
 - Pattern: fuzzy match threshold 0
 - Severity: high
-- Status: acknowledged (as of 2026-10-24)
+- Status (as of 2026-10-25): open; no fix PR yet
 
 ## Summary
 

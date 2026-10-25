@@ -5,7 +5,7 @@
 - Environment: NumericDiff (Python and JS)
 - Pattern: documented options ignored
 - Severity: medium
-- Status: open (as of 2026-10-24)
+- Status (as of 2026-10-25): open; fix PR [#252](https://github.com/braintrustdata/autoevals/pull/252) (community, open)
 
 ## Summary
 

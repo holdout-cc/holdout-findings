@@ -1,0 +1,7 @@
+gold box                           reward=1 correct=True
+wrong box                          reward=0.1607 correct=False
+same wrong box, corners swapped    reward=1 correct=True
+constant [1000, 1000, 0, 0]        reward=11.11 correct=True
+constant [1e9, 1e9, -1e9, -1e9]    reward=4.444e+13 correct=True
+nan                                reward=9e+07 correct=True
+inf                                reward=inf correct=True

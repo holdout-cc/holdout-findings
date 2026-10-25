@@ -5,7 +5,7 @@
 - Environment: agent_world_model_env
 - Pattern: do-nothing pass
 - Severity: high
-- Status: open (as of 2026-10-24)
+- Status (as of 2026-10-25): open; fix PR [#1477](https://github.com/openenv/OpenEnv/pull/1477) (community, open)
 
 ## Summary
 

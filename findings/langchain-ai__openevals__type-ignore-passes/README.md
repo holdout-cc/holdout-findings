@@ -5,7 +5,7 @@
 - Environment: pyright / mypy code evaluators
 - Pattern: suppression comment passes
 - Severity: medium
-- Status: open (as of 2026-10-24)
+- Status (as of 2026-10-25): open; no fix PR yet
 
 ## Summary
 

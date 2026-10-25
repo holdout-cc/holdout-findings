@@ -1,0 +1,830 @@
+{
+  "generated_at": "2026-10-25T21:48:10Z",
+  "totals": {
+    "filed": 27,
+    "fixed": 1,
+    "with_open_pr": 13,
+    "with_open_pr_ours": 4,
+    "no_pr": 13,
+    "maintainer_engaged": 1,
+    "needs_writeup": 0,
+    "repos": 20,
+    "orgs": 17,
+    "by_severity": {
+      "high": 18,
+      "medium": 8,
+      "low": 1
+    },
+    "by_status": {
+      "open": 26,
+      "acknowledged": 0,
+      "fixed": 1,
+      "closed": 0
+    }
+  },
+  "issues": [
+    {
+      "org": "braintrustdata",
+      "repo": "autoevals",
+      "number": 251,
+      "url": "https://github.com/braintrustdata/autoevals/issues/251",
+      "title": "NumericDiff ignores documented tolerance options and can score near misses highly",
+      "environment": "NumericDiff (Python and JS)",
+      "pattern_tags": [
+        "documented options ignored"
+      ],
+      "pattern_slugs": [
+        "04-loose-similarity-thresholds",
+        "13-ignored-options"
+      ],
+      "severity": "medium",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [
+        {
+          "url": "https://github.com/braintrustdata/autoevals/pull/252",
+          "number": 252,
+          "is_ours": false,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/braintrustdata__autoevals__numericdiff-ignored-options/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "GeneralReasoning",
+      "repo": "env-r2e-gym",
+      "number": 11,
+      "url": "https://github.com/GeneralReasoning/env-r2e-gym/issues/11",
+      "title": "parse_log scores a failing withheld test as PASSED when its failure message contains \"PASSED\"",
+      "environment": "env-r2e-gym (`parse_log`)",
+      "pattern_tags": [
+        "stdout scraping"
+      ],
+      "pattern_slugs": [
+        "03-substring-and-hedge-matching",
+        "06-stdout-scraping"
+      ],
+      "severity": "high",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/GeneralReasoning__env-r2e-gym__parse-log-passed-substring/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "Handshake-AI-Research",
+      "repo": "ATLAS-Finance",
+      "number": 12,
+      "url": "https://github.com/Handshake-AI-Research/ATLAS-Finance/issues/12",
+      "title": "pass_at_k ignores critical criteria skipped by failed section gates",
+      "environment": "pass@k (`scripts/pass_at_k.py`)",
+      "pattern_tags": [
+        "skipped criteria pass"
+      ],
+      "pattern_slugs": [
+        "01-do-nothing-passes",
+        "08-failure-defaults-to-pass"
+      ],
+      "severity": "high",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/Handshake-AI-Research__ATLAS-Finance__skipped-critical-criteria/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "Handshake-AI-Research",
+      "repo": "gandalf-the-grader",
+      "number": 47,
+      "url": "https://github.com/Handshake-AI-Research/gandalf-the-grader/issues/47",
+      "title": "Quoted \"false\" judge verdicts are scored as true",
+      "environment": "judge verdict parsing (`Verdict.from_raw`)",
+      "pattern_tags": [
+        "judge parse default"
+      ],
+      "pattern_slugs": [
+        "10-llm-judge-parsing",
+        "14-correct-work-failed"
+      ],
+      "severity": "medium",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/Handshake-AI-Research__gandalf-the-grader__quoted-false-verdict/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "hud-evals",
+      "repo": "hud-python",
+      "number": 736,
+      "url": "https://github.com/hud-evals/hud-python/issues/736",
+      "title": "daytona-rl `fix_calc`: reward 1.0 while `calc.py` stays broken (test file is editable, pass count is read from stdout)",
+      "environment": "cookbooks/daytona-rl `fix_calc`",
+      "pattern_tags": [
+        "agent-writable tests",
+        "stdout scraping"
+      ],
+      "pattern_slugs": [
+        "02-first-vs-last-match",
+        "05-agent-writable-grader-files",
+        "06-stdout-scraping",
+        "07-exit-code-only"
+      ],
+      "severity": "high",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [
+        {
+          "url": "https://github.com/hud-evals/hud-python/pull/739",
+          "number": 739,
+          "is_ours": false,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        },
+        {
+          "url": "https://github.com/hud-evals/hud-python/pull/745",
+          "number": 745,
+          "is_ours": false,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/hud-evals__hud-python__fix-calc-editable-tests/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "hud-evals",
+      "repo": "hud-python",
+      "number": 737,
+      "url": "https://github.com/hud-evals/hud-python/issues/737",
+      "title": "coding-task: an agent can drop a failed run from Job.reward by making the hidden tests exit before writing JUnit XML",
+      "environment": "coding environment / `Job.reward`",
+      "pattern_tags": [
+        "errors dropped from mean"
+      ],
+      "pattern_slugs": [
+        "09-errors-dropped-from-aggregate"
+      ],
+      "severity": "medium",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [
+        {
+          "url": "https://github.com/hud-evals/hud-python/pull/740",
+          "number": 740,
+          "is_ours": false,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/hud-evals__hud-python__coding-error-dropped-from-mean/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "huggingface",
+      "repo": "Repo2RLEnv",
+      "number": 211,
+      "url": "https://github.com/huggingface/Repo2RLEnv/issues/211",
+      "title": "pr_runtime test.sh: an agent-added conftest.py scores 1.0 with resolved=True",
+      "environment": "`pr_runtime` / `commit_runtime` / `cve_patches` test script (`build_eval_script`)",
+      "pattern_tags": [
+        "agent-added conftest"
+      ],
+      "pattern_slugs": [
+        "05-agent-writable-grader-files",
+        "15-submission-disables-checker"
+      ],
+      "severity": "high",
+      "filed": "2026-10-23",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [
+        {
+          "url": "https://github.com/huggingface/Repo2RLEnv/pull/212",
+          "number": 212,
+          "is_ours": true,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/huggingface__Repo2RLEnv__agent-conftest-resolves/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "langchain-ai",
+      "repo": "openevals",
+      "number": 290,
+      "url": "https://github.com/langchain-ai/openevals/issues/290",
+      "title": "pyright/mypy evaluators: a leading `# type: ignore` in the graded output makes code with type errors pass (pyright also passes syntax errors and prose)",
+      "environment": "pyright / mypy code evaluators",
+      "pattern_tags": [
+        "suppression comment passes"
+      ],
+      "pattern_slugs": [
+        "15-submission-disables-checker"
+      ],
+      "severity": "medium",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/langchain-ai__openevals__type-ignore-passes/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "METR",
+      "repo": "inspect-agents",
+      "number": 136,
+      "url": "https://github.com/METR/inspect-agents/issues/136",
+      "title": "Reward-hacking scanner can miss actions removed by handoff or context trimming",
+      "environment": "`reward_hacking_scanner` over `metr_agents` transcripts",
+      "pattern_tags": [
+        "judge sees trimmed history"
+      ],
+      "pattern_slugs": [
+        "16-incomplete-evidence"
+      ],
+      "severity": "high",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/METR__inspect-agents__scanner-misses-trimmed-history/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "NVIDIA-NeMo",
+      "repo": "Gym",
+      "number": 4900,
+      "url": "https://github.com/NVIDIA-NeMo/Gym/issues/4900",
+      "title": "single_step_tool_use_with_argument_comparison: word_count_similarity_threshold 0.0 (SWE/Droid pivot configs) accepts any multi-word string, e.g. \"echo done\" for every bash command",
+      "environment": "single_step_tool_use_with_argument_comparison (SWE/Droid pivot configs)",
+      "pattern_tags": [
+        "fuzzy match threshold 0"
+      ],
+      "pattern_slugs": [
+        "04-loose-similarity-thresholds"
+      ],
+      "severity": "high",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/NVIDIA-NeMo__Gym__argument-comparison-threshold-zero/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "NVIDIA-NeMo",
+      "repo": "Gym",
+      "number": 4901,
+      "url": "https://github.com/NVIDIA-NeMo/Gym/issues/4901",
+      "title": "scicode: `raise SystemExit(0)` in the generated code passes every sub-step (exit code 0 is the only pass signal)",
+      "environment": "scicode",
+      "pattern_tags": [
+        "early exit passes"
+      ],
+      "pattern_slugs": [
+        "07-exit-code-only"
+      ],
+      "severity": "high",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [
+        {
+          "url": "https://github.com/NVIDIA-NeMo/Gym/pull/4946",
+          "number": 4946,
+          "is_ours": false,
+          "state": "draft",
+          "merged": false,
+          "draft": true
+        }
+      ],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/NVIDIA-NeMo__Gym__scicode-systemexit/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "NVIDIA-NeMo",
+      "repo": "Gym",
+      "number": 5011,
+      "url": "https://github.com/NVIDIA-NeMo/Gym/issues/5011",
+      "title": "math_advanced_calculations: verify() never reads the final answer, so a wrong or missing final answer can still get reward 1.0",
+      "environment": "math_advanced_calculations",
+      "pattern_tags": [
+        "final answer not read"
+      ],
+      "pattern_slugs": [
+        "16-incomplete-evidence"
+      ],
+      "severity": "high",
+      "filed": "2026-10-23",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [
+        {
+          "url": "https://github.com/NVIDIA-NeMo/Gym/pull/5012",
+          "number": 5012,
+          "is_ours": true,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/NVIDIA-NeMo__Gym__math-advanced-final-answer-ignored/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "NVIDIA-NeMo",
+      "repo": "RL",
+      "number": 4871,
+      "url": "https://github.com/NVIDIA-NeMo/RL/issues/4871",
+      "title": "bbox_giou_reward is unbounded: reversed-corner or NaN boxes score far above 1 (RefCOCO env)",
+      "environment": "RefCOCO (`bbox_giou_reward`)",
+      "pattern_tags": [
+        "unbounded similarity score"
+      ],
+      "pattern_slugs": [
+        "04-loose-similarity-thresholds"
+      ],
+      "severity": "high",
+      "filed": "2026-10-23",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [
+        {
+          "url": "https://github.com/NVIDIA-NeMo/RL/pull/4872",
+          "number": 4872,
+          "is_ours": true,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/NVIDIA-NeMo__RL__bbox-giou-unbounded/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "openai",
+      "repo": "human-eval",
+      "number": 71,
+      "url": "https://github.com/openai/human-eval/issues/71",
+      "title": "A completion ending in a decorator replaces the test's check() with a no-op (100/164 tasks pass)",
+      "environment": "HumanEval execution harness",
+      "pattern_tags": [
+        "harness override"
+      ],
+      "pattern_slugs": [
+        "15-submission-disables-checker"
+      ],
+      "severity": "high",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [
+        {
+          "url": "https://github.com/openai/human-eval/pull/72",
+          "number": 72,
+          "is_ours": false,
+          "state": "draft",
+          "merged": false,
+          "draft": true
+        }
+      ],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/openai__human-eval__decorator-replaces-check/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "openenv",
+      "repo": "OpenEnv",
+      "number": 1475,
+      "url": "https://github.com/openenv/OpenEnv/issues/1475",
+      "title": "agent_world_model_env: 1,681/10,000 code verifiers pass on untouched seeded databases",
+      "environment": "agent_world_model_env",
+      "pattern_tags": [
+        "do-nothing pass"
+      ],
+      "pattern_slugs": [
+        "01-do-nothing-passes"
+      ],
+      "severity": "high",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [
+        {
+          "url": "https://github.com/openenv/OpenEnv/pull/1477",
+          "number": 1477,
+          "is_ours": false,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/openenv__OpenEnv__awm-noop-complete/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "ORO-AI",
+      "repo": "assistanteval",
+      "number": 6,
+      "url": "https://github.com/ORO-AI/assistanteval/issues/6",
+      "title": "battery-size-known can pass after ordering the wrong battery pack",
+      "environment": "battery-size-known",
+      "pattern_tags": [
+        "purchase not checked"
+      ],
+      "pattern_slugs": [
+        "16-incomplete-evidence"
+      ],
+      "severity": "high",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/ORO-AI__assistanteval__battery-wrong-pack/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "PrimeIntellect-ai",
+      "repo": "verifiers",
+      "number": 2947,
+      "url": "https://github.com/PrimeIntellect-ai/verifiers/issues/2947",
+      "title": "proposer_solver: the proposer's contract answer is never verified, so false or ambiguous problems earn max learnability",
+      "environment": "proposer_solver",
+      "pattern_tags": [
+        "unverified label"
+      ],
+      "pattern_slugs": [
+        "14-correct-work-failed",
+        "17-unverified-reference-answers"
+      ],
+      "severity": "high",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [
+        {
+          "url": "https://github.com/PrimeIntellect-ai/verifiers/pull/2965",
+          "number": 2965,
+          "is_ours": false,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/PrimeIntellect-ai__verifiers__proposer-solver-unverified-answer/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "PrimeIntellect-ai",
+      "repo": "verifiers",
+      "number": 2948,
+      "url": "https://github.com/PrimeIntellect-ai/verifiers/issues/2948",
+      "title": "deepwiki and scratchpad examples: substring rewards pass without calling the tool they're meant to test",
+      "environment": "deepwiki, scratchpad",
+      "pattern_tags": [
+        "substring match"
+      ],
+      "pattern_slugs": [
+        "03-substring-and-hedge-matching",
+        "16-incomplete-evidence"
+      ],
+      "severity": "low",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [
+        {
+          "url": "https://github.com/PrimeIntellect-ai/verifiers/pull/2958",
+          "number": 2958,
+          "is_ours": false,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/PrimeIntellect-ai__verifiers__deepwiki-scratchpad-substring/",
+      "needs_writeup": false,
+      "excluded_prs": [
+        2979
+      ]
+    },
+    {
+      "org": "scaleapi",
+      "repo": "agentenv-framework",
+      "number": 305,
+      "url": "https://github.com/scaleapi/agentenv-framework/issues/305",
+      "title": "Reward-mode container verifier scores a reward.txt the agent planted, even when test.sh exits non-zero",
+      "environment": "container unit-test verifier (reward mode)",
+      "pattern_tags": [
+        "planted reward file"
+      ],
+      "pattern_slugs": [
+        "05-agent-writable-grader-files",
+        "08-failure-defaults-to-pass"
+      ],
+      "severity": "medium",
+      "filed": "2026-10-22",
+      "state": "closed",
+      "state_reason": "completed",
+      "status": "fixed",
+      "fix_prs": [
+        {
+          "url": "https://github.com/scaleapi/agentenv-framework/pull/310",
+          "number": 310,
+          "is_ours": false,
+          "state": "merged",
+          "merged": true,
+          "draft": false
+        }
+      ],
+      "maintainer_engaged": true,
+      "finding_folder": "findings/scaleapi__agentenv-framework__planted-reward-file/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "scaleapi",
+      "repo": "rsi-benchmark",
+      "number": 102,
+      "url": "https://github.com/scaleapi/rsi-benchmark/issues/102",
+      "title": "nano-gpt-data-curation: invalid or empty submission gets reward 0.0, the best value on a lower-is-better perplexity metric",
+      "environment": "samples/nano-gpt-data-curation",
+      "pattern_tags": [
+        "failure scores best"
+      ],
+      "pattern_slugs": [
+        "08-failure-defaults-to-pass"
+      ],
+      "severity": "medium",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/scaleapi__rsi-benchmark__nano-gpt-failure-scores-best/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "scaleapi",
+      "repo": "rsi-benchmark",
+      "number": 103,
+      "url": "https://github.com/scaleapi/rsi-benchmark/issues/103",
+      "title": "on-policy-self-distillation verifier can score a reused checkpoint without enforcing 100 training steps",
+      "environment": "samples/on-policy-self-distillation",
+      "pattern_tags": [
+        "budget not enforced"
+      ],
+      "pattern_slugs": [
+        "05-agent-writable-grader-files",
+        "13-ignored-options"
+      ],
+      "severity": "high",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/scaleapi__rsi-benchmark__opsd-step-cap-unenforced/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "sierra-research",
+      "repo": "tau2-bench",
+      "number": 672,
+      "url": "https://github.com/sierra-research/tau2-bench/issues/672",
+      "title": "Malformed tool-call JSON and empty replies can be excluded from the 2.0 score",
+      "environment": "2.0 benchmark score (`metrics/benchmark.py`)",
+      "pattern_tags": [
+        "errors dropped from mean"
+      ],
+      "pattern_slugs": [
+        "09-errors-dropped-from-aggregate"
+      ],
+      "severity": "medium",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [
+        {
+          "url": "https://github.com/sierra-research/tau2-bench/pull/674",
+          "number": 674,
+          "is_ours": false,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/sierra-research__tau2-bench__agent-errors-excluded/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "Toloka",
+      "repo": "tolokaforge",
+      "number": 1933,
+      "url": "https://github.com/Toloka/tolokaforge/issues/1933",
+      "title": "bug: coding examples are graded by source-text substrings, so unfixed code with the expected snippet in a comment scores 1.0",
+      "environment": "examples/native/coding",
+      "pattern_tags": [
+        "substring match"
+      ],
+      "pattern_slugs": [
+        "11-partial-credit-adds-up",
+        "12-source-text-matching",
+        "14-correct-work-failed"
+      ],
+      "severity": "high",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/Toloka__tolokaforge__coding-source-substring/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "Toloka",
+      "repo": "tolokaforge",
+      "number": 1934,
+      "url": "https://github.com/Toloka/tolokaforge/issues/1934",
+      "title": "bug: terminal_bench 2.1 tasks mount /tests writable in the agent's container, so rewriting test.sh scores 1.0",
+      "environment": "terminal_bench adapter (2.1-shape tasks)",
+      "pattern_tags": [
+        "agent-writable tests"
+      ],
+      "pattern_slugs": [
+        "05-agent-writable-grader-files"
+      ],
+      "severity": "high",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/Toloka__tolokaforge__terminal-bench-writable-tests/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "UiPath",
+      "repo": "coder_eval",
+      "number": 233,
+      "url": "https://github.com/UiPath/coder_eval/issues/233",
+      "title": "skillsbench-3d-scan-calc: verifier recomputes the answer from the agent-writable scan_data.stl, so overwriting it and reporting mass 0 scores 1.0",
+      "environment": "skillsbench 3d-scan-calc",
+      "pattern_tags": [
+        "agent-writable ground truth"
+      ],
+      "pattern_slugs": [
+        "05-agent-writable-grader-files",
+        "17-unverified-reference-answers"
+      ],
+      "severity": "high",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/UiPath__coder_eval__3d-scan-calc-writable-input/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "UiPath",
+      "repo": "coder_eval",
+      "number": 234,
+      "url": "https://github.com/UiPath/coder_eval/issues/234",
+      "title": "skillsbench court-form-filling: a text-only PDF with no form fields scores 1.0 (all 12 checkbox tests skip)",
+      "environment": "skillsbench court-form-filling",
+      "pattern_tags": [
+        "skipped tests pass"
+      ],
+      "pattern_slugs": [
+        "03-substring-and-hedge-matching",
+        "07-exit-code-only",
+        "08-failure-defaults-to-pass"
+      ],
+      "severity": "high",
+      "filed": "2026-10-22",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/UiPath__coder_eval__court-form-skipped-checkboxes/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    },
+    {
+      "org": "verl-project",
+      "repo": "verl",
+      "number": 8346,
+      "url": "https://github.com/verl-project/verl/issues/8346",
+      "title": "prime_math reward gives full credit to wrong intervals and to 100x, 1/100x and off-by-one numbers, and gives 0 to many correct equation answers",
+      "environment": "`prime_math` reward (`default_compute_score` for `numina_*` data sources)",
+      "pattern_tags": [
+        "loose numeric and interval match"
+      ],
+      "pattern_slugs": [
+        "04-loose-similarity-thresholds",
+        "14-correct-work-failed"
+      ],
+      "severity": "medium",
+      "filed": "2026-10-23",
+      "state": "open",
+      "state_reason": null,
+      "status": "open",
+      "fix_prs": [
+        {
+          "url": "https://github.com/verl-project/verl/pull/8347",
+          "number": 8347,
+          "is_ours": true,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
+      "maintainer_engaged": false,
+      "finding_folder": "findings/verl-project__verl__prime-math-loose-equality/",
+      "needs_writeup": false,
+      "excluded_prs": []
+    }
+  ]
+}

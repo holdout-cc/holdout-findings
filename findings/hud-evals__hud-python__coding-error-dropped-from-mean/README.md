@@ -5,7 +5,7 @@
 - Environment: coding environment / `Job.reward`
 - Pattern: errors dropped from mean
 - Severity: medium
-- Status: open (as of 2026-10-24)
+- Status (as of 2026-10-25): open; fix PR [#740](https://github.com/hud-evals/hud-python/pull/740) (community, open)
 
 ## Summary
 
