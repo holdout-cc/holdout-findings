@@ -5,7 +5,7 @@
 - Environment: NumericDiff (Python and JS)
 - Pattern: documented options ignored
 - Severity: medium
-- Status (as of 2026-10-25): open; fix PR [#252](https://github.com/braintrustdata/autoevals/pull/252) (community, open)
+- Status (as of 2026-10-26): open; fix PR [#252](https://github.com/braintrustdata/autoevals/pull/252) (community, open)
 
 ## Summary
 

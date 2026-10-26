@@ -5,7 +5,7 @@
 - Environment: HumanEval execution harness
 - Pattern: harness override
 - Severity: high
-- Status (as of 2026-10-25): open; fix PR [#72](https://github.com/openai/human-eval/pull/72) (community, draft)
+- Status (as of 2026-10-26): open; fix PR [#72](https://github.com/openai/human-eval/pull/72) (community, open)
 
 ## Summary
 

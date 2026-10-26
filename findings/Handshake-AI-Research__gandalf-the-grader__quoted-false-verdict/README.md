@@ -5,7 +5,7 @@
 - Environment: judge verdict parsing (`Verdict.from_raw`)
 - Pattern: judge parse default
 - Severity: medium
-- Status (as of 2026-10-25): open; no fix PR yet
+- Status (as of 2026-10-26): open; fix PR [#48](https://github.com/Handshake-AI-Research/gandalf-the-grader/pull/48) (community, open)
 
 ## Summary
 

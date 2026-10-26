@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-25T21:48:10Z",
+  "generated_at": "2026-10-26T06:31:31Z",
   "totals": {
     "filed": 27,
     "fixed": 1,
-    "with_open_pr": 13,
+    "with_open_pr": 14,
     "with_open_pr_ours": 4,
-    "no_pr": 13,
-    "maintainer_engaged": 1,
+    "no_pr": 12,
+    "maintainer_engaged": 2,
     "needs_writeup": 0,
     "repos": 20,
     "orgs": 17,
@@ -16,8 +16,8 @@
       "low": 1
     },
     "by_status": {
-      "open": 26,
-      "acknowledged": 0,
+      "open": 25,
+      "acknowledged": 1,
       "fixed": 1,
       "closed": 0
     }
@@ -126,7 +126,16 @@
       "state": "open",
       "state_reason": null,
       "status": "open",
-      "fix_prs": [],
+      "fix_prs": [
+        {
+          "url": "https://github.com/Handshake-AI-Research/gandalf-the-grader/pull/48",
+          "number": 48,
+          "is_ours": false,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
       "maintainer_engaged": false,
       "finding_folder": "findings/Handshake-AI-Research__gandalf-the-grader__quoted-false-verdict/",
       "needs_writeup": false,
@@ -438,9 +447,9 @@
           "url": "https://github.com/openai/human-eval/pull/72",
           "number": 72,
           "is_ours": false,
-          "state": "draft",
+          "state": "open",
           "merged": false,
-          "draft": true
+          "draft": false
         }
       ],
       "maintainer_engaged": false,
@@ -759,9 +768,18 @@
       "filed": "2026-10-22",
       "state": "open",
       "state_reason": null,
-      "status": "open",
-      "fix_prs": [],
-      "maintainer_engaged": false,
+      "status": "acknowledged",
+      "fix_prs": [
+        {
+          "url": "https://github.com/UiPath/coder_eval/pull/237",
+          "number": 237,
+          "is_ours": true,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
+      "maintainer_engaged": true,
       "finding_folder": "findings/UiPath__coder_eval__3d-scan-calc-writable-input/",
       "needs_writeup": false,
       "excluded_prs": []
@@ -816,7 +834,7 @@
           "url": "https://github.com/verl-project/verl/pull/8347",
           "number": 8347,
           "is_ours": true,
-          "state": "open",
+          "state": "closed",
           "merged": false,
           "draft": false
         }

@@ -5,7 +5,7 @@
 - Environment: `pr_runtime` / `commit_runtime` / `cve_patches` test script (`build_eval_script`)
 - Pattern: agent-added conftest
 - Severity: high
-- Status (as of 2026-10-25): open; fix PR [#212](https://github.com/huggingface/Repo2RLEnv/pull/212) (ours, open)
+- Status (as of 2026-10-26): open; fix PR [#212](https://github.com/huggingface/Repo2RLEnv/pull/212) (ours, open)
 
 ## Summary
 

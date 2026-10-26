@@ -5,7 +5,7 @@
 - Environment: scicode
 - Pattern: early exit passes
 - Severity: high
-- Status (as of 2026-10-25): open; fix PR [#4946](https://github.com/NVIDIA-NeMo/Gym/pull/4946) (community, draft)
+- Status (as of 2026-10-26): open; fix PR [#4946](https://github.com/NVIDIA-NeMo/Gym/pull/4946) (community, draft)
 
 ## Summary
 

@@ -5,7 +5,7 @@
 - Environment: `reward_hacking_scanner` over `metr_agents` transcripts
 - Pattern: judge sees trimmed history
 - Severity: high
-- Status (as of 2026-10-25): open; no fix PR yet
+- Status (as of 2026-10-26): open; no fix PR yet
 
 ## Summary
 

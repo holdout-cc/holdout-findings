@@ -5,7 +5,7 @@
 - Environment: cookbooks/daytona-rl `fix_calc`
 - Pattern: agent-writable tests, stdout scraping
 - Severity: high
-- Status (as of 2026-10-25): open; fix PR [#739](https://github.com/hud-evals/hud-python/pull/739) (community, open), [#745](https://github.com/hud-evals/hud-python/pull/745) (community, open)
+- Status (as of 2026-10-26): open; fix PR [#739](https://github.com/hud-evals/hud-python/pull/739) (community, open), [#745](https://github.com/hud-evals/hud-python/pull/745) (community, open)
 
 ## Summary
 

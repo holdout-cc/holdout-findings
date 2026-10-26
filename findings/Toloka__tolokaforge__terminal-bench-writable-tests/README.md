@@ -5,7 +5,7 @@
 - Environment: terminal_bench adapter (2.1-shape tasks)
 - Pattern: agent-writable tests
 - Severity: high
-- Status (as of 2026-10-25): open; no fix PR yet
+- Status (as of 2026-10-26): open; no fix PR yet
 
 ## Summary
 

@@ -5,7 +5,7 @@
 - Environment: skillsbench 3d-scan-calc
 - Pattern: agent-writable ground truth
 - Severity: high
-- Status (as of 2026-10-25): open; no fix PR yet
+- Status (as of 2026-10-26): acknowledged; fix PR [#237](https://github.com/UiPath/coder_eval/pull/237) (ours, open)
 
 ## Summary
 

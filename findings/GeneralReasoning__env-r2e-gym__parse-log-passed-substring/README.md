@@ -5,7 +5,7 @@
 - Environment: env-r2e-gym (`parse_log`)
 - Pattern: stdout scraping
 - Severity: high
-- Status (as of 2026-10-25): open; no fix PR yet
+- Status (as of 2026-10-26): open; no fix PR yet
 
 ## Summary
 

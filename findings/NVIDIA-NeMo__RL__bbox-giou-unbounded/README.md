@@ -5,7 +5,7 @@
 - Environment: RefCOCO (`bbox_giou_reward`)
 - Pattern: unbounded similarity score
 - Severity: high
-- Status (as of 2026-10-25): open; fix PR [#4872](https://github.com/NVIDIA-NeMo/RL/pull/4872) (ours, open)
+- Status (as of 2026-10-26): open; fix PR [#4872](https://github.com/NVIDIA-NeMo/RL/pull/4872) (ours, open)
 
 ## Summary
 

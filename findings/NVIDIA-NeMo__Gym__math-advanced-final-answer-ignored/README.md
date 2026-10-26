@@ -5,7 +5,7 @@
 - Environment: math_advanced_calculations
 - Pattern: final answer not read
 - Severity: high
-- Status (as of 2026-10-25): open; fix PR [#5012](https://github.com/NVIDIA-NeMo/Gym/pull/5012) (ours, open)
+- Status (as of 2026-10-26): open; fix PR [#5012](https://github.com/NVIDIA-NeMo/Gym/pull/5012) (ours, open)
 
 ## Summary
 
