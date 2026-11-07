@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T06:28:00Z",
+  "generated_at": "2026-11-07T06:33:08Z",
   "totals": {
     "filed": 27,
     "fixed": 5,
@@ -57,7 +57,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "GeneralReasoning",
@@ -84,7 +85,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "Handshake-AI-Research",
@@ -111,7 +113,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "Handshake-AI-Research",
@@ -147,7 +150,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "hud-evals",
@@ -202,7 +206,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "hud-evals",
@@ -245,7 +250,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "huggingface",
@@ -277,7 +283,14 @@
       "included_prs": [],
       "closed_without_fix": false,
       "partial_fix_prs": [
-        "https://github.com/huggingface/Repo2RLEnv/pull/212"
+        {
+          "url": "https://github.com/huggingface/Repo2RLEnv/pull/212",
+          "number": 212,
+          "is_ours": true,
+          "state": "merged",
+          "merged": true,
+          "draft": false
+        }
       ]
     },
     {
@@ -313,7 +326,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "METR",
@@ -339,7 +353,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "NVIDIA-NeMo",
@@ -365,7 +380,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "NVIDIA-NeMo",
@@ -400,7 +416,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "NVIDIA-NeMo",
@@ -435,7 +452,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "NVIDIA-NeMo",
@@ -470,7 +488,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "openai",
@@ -505,7 +524,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "openenv",
@@ -540,7 +560,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "ORO-AI",
@@ -566,7 +587,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "PrimeIntellect-ai",
@@ -602,7 +624,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "PrimeIntellect-ai",
@@ -640,7 +663,8 @@
         2979
       ],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "scaleapi",
@@ -676,7 +700,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "scaleapi",
@@ -711,7 +736,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "scaleapi",
@@ -738,7 +764,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "sierra-research",
@@ -773,7 +800,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "Toloka",
@@ -801,7 +829,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "Toloka",
@@ -827,7 +856,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "UiPath",
@@ -863,7 +893,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "UiPath",
@@ -900,7 +931,8 @@
       "needs_writeup": false,
       "excluded_prs": [],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "verl-project",
@@ -946,7 +978,8 @@
         "https://github.com/ROCm/repo-digest/pull/36"
       ],
       "included_prs": [],
-      "closed_without_fix": true
+      "closed_without_fix": true,
+      "partial_fix_prs": []
     }
   ]
 }
