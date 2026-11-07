@@ -26,10 +26,14 @@ Fix pull requests are the pull requests with evidence that they fix the issue:
     references the issue.
 A pull request that only mentions the issue is not recorded, and neither is one
 whose link was removed by a disconnected event, unless GitHub still lists it as
-closing the issue. Pull request numbers listed in a record's hand-written
-excluded_prs are never recorded (for a PR the rules above match that does not
-fix the issue). A pull request is "ours" when its author also filed the
-issue. Its state is "open", "draft" (an open draft), "merged" or "closed".
+closing the issue. Pull requests listed in a record's hand-written
+excluded_prs (by number, or by URL for a pull request in another repository)
+are never recorded (for a PR the rules above match that does not fix the
+issue). Pull request URLs listed in a record's hand-written included_prs are
+recorded even when none of the rules above match (for a PR checked by hand to
+fix the issue, for example when its fix wording was edited out to keep the
+issue open); they must appear in the issue's timeline. A pull request is
+"ours" when its author also filed the issue. Its state is "open", "draft" (an open draft), "merged" or "closed".
 
 maintainer_engaged is true only when someone with owner, member or
 collaborator access (not a bot and not us) commented on the issue, or
@@ -38,7 +42,10 @@ commented on or reviewed one of its fix pull requests.
 Status of each issue:
   fixed         closed as completed, or a fix pull request (with the evidence
                 above) was merged
-  closed        closed for any other reason
+  closed        closed for any other reason, or closed as completed with the
+                hand-written closed_without_fix set (checked by hand: no fix
+                landed, for example the maintainers declined it) and no merged
+                fix pull request
   acknowledged  open, and maintainer_engaged
   open          anything else
 
@@ -64,7 +71,7 @@ SEVERITIES = ("high", "medium", "low")
 ISSUE_URL = re.compile(r"^https://github\.com/([\w.-]+)/([\w.-]+)/issues/(\d+)/?$")
 FIELDS = ("org", "repo", "number", "url", "title", "environment", "pattern_tags", "pattern_slugs",
           "severity", "filed", "state", "state_reason", "status", "fix_prs", "maintainer_engaged",
-          "finding_folder", "needs_writeup", "excluded_prs")
+          "finding_folder", "needs_writeup", "excluded_prs", "included_prs", "closed_without_fix")
 
 QUERY = """
 fragment PR on PullRequest {
@@ -159,7 +166,7 @@ def pr_state(pr):
     return pr["state"].lower()
 
 
-def fix_prs(issue, ours, excluded=()):
+def fix_prs(issue, ours, excluded=(), included=()):
     """Return the issue's fix pull requests, plus the raw nodes for engagement checks."""
     found = {}      # url -> PR node
     closing = set()  # GitHub lists the PR as closing the issue
@@ -187,9 +194,9 @@ def fix_prs(issue, ours, excluded=()):
                     keyword.add(pr["url"])
     nodes = []
     for url, pr in found.items():
-        if pr["number"] in excluded:
+        if pr["number"] in excluded or url in excluded:
             continue  # checked by hand: not a fix for this issue
-        if url in closing:
+        if url in closing or url in included:
             nodes.append(pr)
         elif linked.get(url) is False:
             continue  # unlinked, and GitHub no longer lists it as closing the issue
@@ -220,7 +227,12 @@ def refresh(rec, issue):
     rec["state"] = issue["state"].lower()
     rec["state_reason"] = issue["stateReason"].lower() if issue.get("stateReason") else None
     ours = {(issue.get("author") or {}).get("login")} - {None}
-    rec["fix_prs"], pr_nodes = fix_prs(issue, ours, set(rec.get("excluded_prs") or []))
+    included = set(rec.get("included_prs") or [])
+    rec["fix_prs"], pr_nodes = fix_prs(issue, ours, set(rec.get("excluded_prs") or []), included)
+    missing = included - {pr["url"] for pr in rec["fix_prs"]}
+    if missing:
+        print(f"warning: included_prs not in the timeline of {rec['url']}: {', '.join(sorted(missing))}",
+              file=sys.stderr)
     rec["maintainer_engaged"] = maintainer_in(issue["comments"]["nodes"], ours) or any(
         maintainer_in(pr["comments"]["nodes"], ours) or maintainer_in(pr["reviews"]["nodes"], ours)
         for pr in pr_nodes)
@@ -228,7 +240,8 @@ def refresh(rec, issue):
 
 
 def status_of(rec):
-    if rec.get("state") == "closed" and rec.get("state_reason") == "completed":
+    if (rec.get("state") == "closed" and rec.get("state_reason") == "completed"
+            and not rec.get("closed_without_fix")):
         return "fixed"
     if any(pr["merged"] for pr in rec.get("fix_prs") or []):
         return "fixed"
@@ -245,7 +258,7 @@ def stub(url):
             "environment": None, "pattern_tags": [], "pattern_slugs": [], "severity": None,
             "filed": None, "state": None, "state_reason": None, "status": None, "fix_prs": [],
             "maintainer_engaged": False, "finding_folder": None, "needs_writeup": True,
-            "excluded_prs": []}
+            "excluded_prs": [], "included_prs": [], "closed_without_fix": False}
 
 
 def read_issue_list():
@@ -428,6 +441,8 @@ def main():
         rec["pattern_tags"] = rec["pattern_tags"] or []
         rec["pattern_slugs"] = rec["pattern_slugs"] or []
         rec["excluded_prs"] = rec["excluded_prs"] or []
+        rec["included_prs"] = rec["included_prs"] or []
+        rec["closed_without_fix"] = bool(rec["closed_without_fix"])
     t = totals(records)
     now = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0)
     today = now.date().isoformat()
