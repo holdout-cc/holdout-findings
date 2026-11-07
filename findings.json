@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-26T06:31:31Z",
+  "generated_at": "2026-11-07T06:33:08Z",
   "totals": {
     "filed": 27,
-    "fixed": 1,
-    "with_open_pr": 14,
-    "with_open_pr_ours": 4,
-    "no_pr": 12,
-    "maintainer_engaged": 2,
+    "fixed": 5,
+    "with_open_pr": 12,
+    "with_open_pr_ours": 3,
+    "no_pr": 10,
+    "maintainer_engaged": 8,
     "needs_writeup": 0,
     "repos": 20,
     "orgs": 17,
@@ -16,10 +16,10 @@
       "low": 1
     },
     "by_status": {
-      "open": 25,
-      "acknowledged": 1,
-      "fixed": 1,
-      "closed": 0
+      "open": 19,
+      "acknowledged": 2,
+      "fixed": 5,
+      "closed": 1
     }
   },
   "issues": [
@@ -55,7 +55,10 @@
       "maintainer_engaged": false,
       "finding_folder": "findings/braintrustdata__autoevals__numericdiff-ignored-options/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "GeneralReasoning",
@@ -80,7 +83,10 @@
       "maintainer_engaged": false,
       "finding_folder": "findings/GeneralReasoning__env-r2e-gym__parse-log-passed-substring/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "Handshake-AI-Research",
@@ -105,7 +111,10 @@
       "maintainer_engaged": false,
       "finding_folder": "findings/Handshake-AI-Research__ATLAS-Finance__skipped-critical-criteria/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "Handshake-AI-Research",
@@ -139,7 +148,10 @@
       "maintainer_engaged": false,
       "finding_folder": "findings/Handshake-AI-Research__gandalf-the-grader__quoted-false-verdict/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "hud-evals",
@@ -160,15 +172,15 @@
       ],
       "severity": "high",
       "filed": "2026-10-22",
-      "state": "open",
-      "state_reason": null,
-      "status": "open",
+      "state": "closed",
+      "state_reason": "completed",
+      "status": "fixed",
       "fix_prs": [
         {
           "url": "https://github.com/hud-evals/hud-python/pull/739",
           "number": 739,
           "is_ours": false,
-          "state": "open",
+          "state": "closed",
           "merged": false,
           "draft": false
         },
@@ -176,15 +188,26 @@
           "url": "https://github.com/hud-evals/hud-python/pull/745",
           "number": 745,
           "is_ours": false,
-          "state": "open",
+          "state": "closed",
           "merged": false,
+          "draft": false
+        },
+        {
+          "url": "https://github.com/hud-evals/hud-python/pull/791",
+          "number": 791,
+          "is_ours": false,
+          "state": "merged",
+          "merged": true,
           "draft": false
         }
       ],
-      "maintainer_engaged": false,
+      "maintainer_engaged": true,
       "finding_folder": "findings/hud-evals__hud-python__fix-calc-editable-tests/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "hud-evals",
@@ -201,23 +224,34 @@
       ],
       "severity": "medium",
       "filed": "2026-10-22",
-      "state": "open",
-      "state_reason": null,
-      "status": "open",
+      "state": "closed",
+      "state_reason": "completed",
+      "status": "fixed",
       "fix_prs": [
         {
           "url": "https://github.com/hud-evals/hud-python/pull/740",
           "number": 740,
           "is_ours": false,
-          "state": "open",
+          "state": "closed",
           "merged": false,
+          "draft": false
+        },
+        {
+          "url": "https://github.com/hud-evals/hud-python/pull/758",
+          "number": 758,
+          "is_ours": false,
+          "state": "merged",
+          "merged": true,
           "draft": false
         }
       ],
-      "maintainer_engaged": false,
+      "maintainer_engaged": true,
       "finding_folder": "findings/hud-evals__hud-python__coding-error-dropped-from-mean/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "huggingface",
@@ -237,21 +271,27 @@
       "filed": "2026-10-23",
       "state": "open",
       "state_reason": null,
-      "status": "open",
-      "fix_prs": [
+      "status": "acknowledged",
+      "fix_prs": [],
+      "maintainer_engaged": true,
+      "finding_folder": "findings/huggingface__Repo2RLEnv__agent-conftest-resolves/",
+      "needs_writeup": false,
+      "excluded_prs": [
+        220,
+        221
+      ],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": [
         {
           "url": "https://github.com/huggingface/Repo2RLEnv/pull/212",
           "number": 212,
           "is_ours": true,
-          "state": "open",
-          "merged": false,
+          "state": "merged",
+          "merged": true,
           "draft": false
         }
-      ],
-      "maintainer_engaged": false,
-      "finding_folder": "findings/huggingface__Repo2RLEnv__agent-conftest-resolves/",
-      "needs_writeup": false,
-      "excluded_prs": []
+      ]
     },
     {
       "org": "langchain-ai",
@@ -271,11 +311,23 @@
       "state": "open",
       "state_reason": null,
       "status": "open",
-      "fix_prs": [],
+      "fix_prs": [
+        {
+          "url": "https://github.com/langchain-ai/openevals/pull/296",
+          "number": 296,
+          "is_ours": false,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
       "maintainer_engaged": false,
       "finding_folder": "findings/langchain-ai__openevals__type-ignore-passes/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "METR",
@@ -299,7 +351,10 @@
       "maintainer_engaged": false,
       "finding_folder": "findings/METR__inspect-agents__scanner-misses-trimmed-history/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "NVIDIA-NeMo",
@@ -323,7 +378,10 @@
       "maintainer_engaged": false,
       "finding_folder": "findings/NVIDIA-NeMo__Gym__argument-comparison-threshold-zero/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "NVIDIA-NeMo",
@@ -348,15 +406,18 @@
           "url": "https://github.com/NVIDIA-NeMo/Gym/pull/4946",
           "number": 4946,
           "is_ours": false,
-          "state": "draft",
+          "state": "open",
           "merged": false,
-          "draft": true
+          "draft": false
         }
       ],
       "maintainer_engaged": false,
       "finding_folder": "findings/NVIDIA-NeMo__Gym__scicode-systemexit/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "NVIDIA-NeMo",
@@ -389,7 +450,10 @@
       "maintainer_engaged": false,
       "finding_folder": "findings/NVIDIA-NeMo__Gym__math-advanced-final-answer-ignored/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "NVIDIA-NeMo",
@@ -422,7 +486,10 @@
       "maintainer_engaged": false,
       "finding_folder": "findings/NVIDIA-NeMo__RL__bbox-giou-unbounded/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "openai",
@@ -455,7 +522,10 @@
       "maintainer_engaged": false,
       "finding_folder": "findings/openai__human-eval__decorator-replaces-check/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "openenv",
@@ -472,23 +542,26 @@
       ],
       "severity": "high",
       "filed": "2026-10-22",
-      "state": "open",
-      "state_reason": null,
-      "status": "open",
+      "state": "closed",
+      "state_reason": "completed",
+      "status": "fixed",
       "fix_prs": [
         {
           "url": "https://github.com/openenv/OpenEnv/pull/1477",
           "number": 1477,
           "is_ours": false,
-          "state": "open",
-          "merged": false,
+          "state": "merged",
+          "merged": true,
           "draft": false
         }
       ],
-      "maintainer_engaged": false,
+      "maintainer_engaged": true,
       "finding_folder": "findings/openenv__OpenEnv__awm-noop-complete/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "ORO-AI",
@@ -512,7 +585,10 @@
       "maintainer_engaged": false,
       "finding_folder": "findings/ORO-AI__assistanteval__battery-wrong-pack/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "PrimeIntellect-ai",
@@ -546,7 +622,10 @@
       "maintainer_engaged": false,
       "finding_folder": "findings/PrimeIntellect-ai__verifiers__proposer-solver-unverified-answer/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "PrimeIntellect-ai",
@@ -582,7 +661,10 @@
       "needs_writeup": false,
       "excluded_prs": [
         2979
-      ]
+      ],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "scaleapi",
@@ -616,7 +698,10 @@
       "maintainer_engaged": true,
       "finding_folder": "findings/scaleapi__agentenv-framework__planted-reward-file/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "scaleapi",
@@ -636,11 +721,23 @@
       "state": "open",
       "state_reason": null,
       "status": "open",
-      "fix_prs": [],
+      "fix_prs": [
+        {
+          "url": "https://github.com/scaleapi/rsi-benchmark/pull/117",
+          "number": 117,
+          "is_ours": true,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
       "maintainer_engaged": false,
       "finding_folder": "findings/scaleapi__rsi-benchmark__nano-gpt-failure-scores-best/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "scaleapi",
@@ -665,7 +762,10 @@
       "maintainer_engaged": false,
       "finding_folder": "findings/scaleapi__rsi-benchmark__opsd-step-cap-unenforced/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "sierra-research",
@@ -698,7 +798,10 @@
       "maintainer_engaged": false,
       "finding_folder": "findings/sierra-research__tau2-bench__agent-errors-excluded/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "Toloka",
@@ -724,7 +827,10 @@
       "maintainer_engaged": false,
       "finding_folder": "findings/Toloka__tolokaforge__coding-source-substring/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "Toloka",
@@ -748,7 +854,10 @@
       "maintainer_engaged": false,
       "finding_folder": "findings/Toloka__tolokaforge__terminal-bench-writable-tests/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "UiPath",
@@ -766,23 +875,26 @@
       ],
       "severity": "high",
       "filed": "2026-10-22",
-      "state": "open",
-      "state_reason": null,
-      "status": "acknowledged",
+      "state": "closed",
+      "state_reason": "completed",
+      "status": "fixed",
       "fix_prs": [
         {
           "url": "https://github.com/UiPath/coder_eval/pull/237",
           "number": 237,
           "is_ours": true,
-          "state": "open",
-          "merged": false,
+          "state": "merged",
+          "merged": true,
           "draft": false
         }
       ],
       "maintainer_engaged": true,
       "finding_folder": "findings/UiPath__coder_eval__3d-scan-calc-writable-input/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "UiPath",
@@ -803,12 +915,24 @@
       "filed": "2026-10-22",
       "state": "open",
       "state_reason": null,
-      "status": "open",
-      "fix_prs": [],
-      "maintainer_engaged": false,
+      "status": "acknowledged",
+      "fix_prs": [
+        {
+          "url": "https://github.com/UiPath/coder_eval/pull/243",
+          "number": 243,
+          "is_ours": false,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
+      "maintainer_engaged": true,
       "finding_folder": "findings/UiPath__coder_eval__court-form-skipped-checkboxes/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [],
+      "included_prs": [],
+      "closed_without_fix": false,
+      "partial_fix_prs": []
     },
     {
       "org": "verl-project",
@@ -826,9 +950,9 @@
       ],
       "severity": "medium",
       "filed": "2026-10-23",
-      "state": "open",
-      "state_reason": null,
-      "status": "open",
+      "state": "closed",
+      "state_reason": "completed",
+      "status": "closed",
       "fix_prs": [
         {
           "url": "https://github.com/verl-project/verl/pull/8347",
@@ -837,12 +961,25 @@
           "state": "closed",
           "merged": false,
           "draft": false
+        },
+        {
+          "url": "https://github.com/verl-project/verl/pull/8385",
+          "number": 8385,
+          "is_ours": false,
+          "state": "closed",
+          "merged": false,
+          "draft": true
         }
       ],
-      "maintainer_engaged": false,
+      "maintainer_engaged": true,
       "finding_folder": "findings/verl-project__verl__prime-math-loose-equality/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [
+        "https://github.com/ROCm/repo-digest/pull/36"
+      ],
+      "included_prs": [],
+      "closed_without_fix": true,
+      "partial_fix_prs": []
     }
   ]
 }
