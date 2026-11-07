@@ -5,7 +5,7 @@
 - Environment: `pr_runtime` / `commit_runtime` / `cve_patches` test script (`build_eval_script`)
 - Pattern: agent-added conftest
 - Severity: high
-- Status (as of 2026-11-07): acknowledged; fix PR [#2](https://github.com/holdout-cc/holdout-findings/pull/2) (ours, open)
+- Status (as of 2026-11-07): acknowledged; no fix PR yet
 
 ## Summary
 

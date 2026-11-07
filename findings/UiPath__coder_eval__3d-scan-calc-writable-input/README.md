@@ -5,7 +5,7 @@
 - Environment: skillsbench 3d-scan-calc
 - Pattern: agent-writable ground truth
 - Severity: high
-- Status (as of 2026-11-07): fixed; fix PR [#2](https://github.com/holdout-cc/holdout-findings/pull/2) (ours, open), [#237](https://github.com/UiPath/coder_eval/pull/237) (ours, merged)
+- Status (as of 2026-11-07): fixed; fix PR [#237](https://github.com/UiPath/coder_eval/pull/237) (ours, merged)
 
 ## Summary
 

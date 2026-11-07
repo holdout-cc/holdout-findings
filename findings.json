@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-07T06:26:38Z",
+  "generated_at": "2026-11-07T06:28:00Z",
   "totals": {
     "filed": 27,
     "fixed": 5,
-    "with_open_pr": 14,
-    "with_open_pr_ours": 5,
-    "no_pr": 8,
+    "with_open_pr": 12,
+    "with_open_pr_ours": 3,
+    "no_pr": 10,
     "maintainer_engaged": 8,
     "needs_writeup": 0,
     "repos": 20,
@@ -266,16 +266,7 @@
       "state": "open",
       "state_reason": null,
       "status": "acknowledged",
-      "fix_prs": [
-        {
-          "url": "https://github.com/holdout-cc/holdout-findings/pull/2",
-          "number": 2,
-          "is_ours": true,
-          "state": "open",
-          "merged": false,
-          "draft": false
-        }
-      ],
+      "fix_prs": [],
       "maintainer_engaged": true,
       "finding_folder": "findings/huggingface__Repo2RLEnv__agent-conftest-resolves/",
       "needs_writeup": false,
@@ -856,14 +847,6 @@
       "status": "fixed",
       "fix_prs": [
         {
-          "url": "https://github.com/holdout-cc/holdout-findings/pull/2",
-          "number": 2,
-          "is_ours": true,
-          "state": "open",
-          "merged": false,
-          "draft": false
-        },
-        {
           "url": "https://github.com/UiPath/coder_eval/pull/237",
           "number": 237,
           "is_ours": true,
@@ -936,14 +919,6 @@
       "state_reason": "completed",
       "status": "closed",
       "fix_prs": [
-        {
-          "url": "https://github.com/holdout-cc/holdout-findings/pull/2",
-          "number": 2,
-          "is_ours": true,
-          "state": "open",
-          "merged": false,
-          "draft": false
-        },
         {
           "url": "https://github.com/verl-project/verl/pull/8347",
           "number": 8347,
