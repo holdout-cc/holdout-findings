@@ -5,7 +5,7 @@
 - Environment: `prime_math` reward (`default_compute_score` for `numina_*` data sources)
 - Pattern: loose numeric and interval match
 - Severity: medium
-- Status (as of 2026-10-26): open; fix PR [#8347](https://github.com/verl-project/verl/pull/8347) (ours, closed)
+- Status (as of 2026-11-07): closed; fix PR [#8347](https://github.com/verl-project/verl/pull/8347) (ours, closed), [#8385](https://github.com/verl-project/verl/pull/8385) (community, closed)
 
 ## Summary
 
