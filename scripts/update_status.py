@@ -35,6 +35,15 @@ fix the issue, for example when its fix wording was edited out to keep the
 issue open); they must appear in the issue's timeline. A pull request is
 "ours" when its author also filed the issue. Its state is "open", "draft" (an open draft), "merged" or "closed".
 
+partial_fix_prs is hand-written only and never detected: the URLs of pull
+requests checked by hand to fix part of the issue while the maintainers keep
+it open (for example a code repair merged while published data still needs
+regenerating). The script fills in each one's number, author and state from
+the issue's timeline. A partial-fix pull request is never a fix pull request:
+it never makes the status fixed and never counts as an open fix PR. The
+README table and the finding's status line show it, for example
+"acknowledged; partial fix merged (#212, ours), issue still open upstream".
+
 maintainer_engaged is true only when someone with owner, member or
 collaborator access (not a bot and not us) commented on the issue, or
 commented on or reviewed one of its fix pull requests.
@@ -71,7 +80,8 @@ SEVERITIES = ("high", "medium", "low")
 ISSUE_URL = re.compile(r"^https://github\.com/([\w.-]+)/([\w.-]+)/issues/(\d+)/?$")
 FIELDS = ("org", "repo", "number", "url", "title", "environment", "pattern_tags", "pattern_slugs",
           "severity", "filed", "state", "state_reason", "status", "fix_prs", "maintainer_engaged",
-          "finding_folder", "needs_writeup", "excluded_prs", "included_prs", "closed_without_fix")
+          "finding_folder", "needs_writeup", "excluded_prs", "included_prs", "closed_without_fix",
+          "partial_fix_prs")
 
 QUERY = """
 fragment PR on PullRequest {
@@ -166,8 +176,21 @@ def pr_state(pr):
     return pr["state"].lower()
 
 
-def fix_prs(issue, ours, excluded=(), included=()):
-    """Return the issue's fix pull requests, plus the raw nodes for engagement checks."""
+def pr_record(pr, ours):
+    author = (pr.get("author") or {}).get("login")
+    return {
+        "url": pr["url"],
+        "number": pr["number"],
+        "is_ours": author in ours,
+        "state": pr_state(pr),
+        "merged": bool(pr["merged"]),
+        "draft": bool(pr.get("isDraft")),
+    }
+
+
+def fix_prs(issue, ours, excluded=(), included=(), partial=()):
+    """Return the issue's fix pull requests, the raw nodes for engagement checks, and every
+    pull request found in the issue's timeline (url -> node). Partial-fix PRs are never fix PRs."""
     found = {}      # url -> PR node
     closing = set()  # GitHub lists the PR as closing the issue
     keyword = set()  # a cross-reference that will close the issue
@@ -194,8 +217,8 @@ def fix_prs(issue, ours, excluded=(), included=()):
                     keyword.add(pr["url"])
     nodes = []
     for url, pr in found.items():
-        if pr["number"] in excluded or url in excluded:
-            continue  # checked by hand: not a fix for this issue
+        if pr["number"] in excluded or url in excluded or url in partial:
+            continue  # checked by hand: not a (complete) fix for this issue
         if url in closing or url in included:
             nodes.append(pr)
         elif linked.get(url) is False:
@@ -204,18 +227,29 @@ def fix_prs(issue, ours, excluded=(), included=()):
             nodes.append(pr)
         # otherwise it only mentions the issue: not evidence of a fix
     nodes.sort(key=lambda pr: pr["number"])
-    prs = []
-    for pr in nodes:
-        author = (pr.get("author") or {}).get("login")
-        prs.append({
-            "url": pr["url"],
-            "number": pr["number"],
-            "is_ours": author in ours,
-            "state": pr_state(pr),
-            "merged": bool(pr["merged"]),
-            "draft": bool(pr.get("isDraft")),
-        })
-    return prs, nodes
+    return [pr_record(pr, ours) for pr in nodes], nodes, found
+
+
+def partial_url(entry):
+    """A partial_fix_prs entry is a hand-written PR URL, or a record this script wrote from one."""
+    return entry["url"] if isinstance(entry, dict) else entry
+
+
+def partial_fixes(rec, found, ours):
+    """Resolve the hand-written partial_fix_prs to records (number, ours, state). Never auto-detected."""
+    out = []
+    for entry in rec.get("partial_fix_prs") or []:
+        url = partial_url(entry)
+        if url in found:
+            out.append(pr_record(found[url], ours))
+            continue
+        print(f"warning: partial_fix_prs not in the timeline of {rec['url']}: {url}", file=sys.stderr)
+        if isinstance(entry, dict):
+            out.append(entry)  # keep the last known state
+        else:
+            out.append({"url": url, "number": int(url.rstrip("/").rsplit("/", 1)[1]), "is_ours": False,
+                        "state": "unknown", "merged": False, "draft": False})
+    return sorted(out, key=lambda pr: pr["number"])
 
 
 def refresh(rec, issue):
@@ -228,7 +262,9 @@ def refresh(rec, issue):
     rec["state_reason"] = issue["stateReason"].lower() if issue.get("stateReason") else None
     ours = {(issue.get("author") or {}).get("login")} - {None}
     included = set(rec.get("included_prs") or [])
-    rec["fix_prs"], pr_nodes = fix_prs(issue, ours, set(rec.get("excluded_prs") or []), included)
+    partial = {partial_url(e) for e in rec.get("partial_fix_prs") or []}
+    rec["fix_prs"], pr_nodes, found = fix_prs(issue, ours, set(rec.get("excluded_prs") or []), included, partial)
+    rec["partial_fix_prs"] = partial_fixes(rec, found, ours)
     missing = included - {pr["url"] for pr in rec["fix_prs"]}
     if missing:
         print(f"warning: included_prs not in the timeline of {rec['url']}: {', '.join(sorted(missing))}",
@@ -258,7 +294,7 @@ def stub(url):
             "environment": None, "pattern_tags": [], "pattern_slugs": [], "severity": None,
             "filed": None, "state": None, "state_reason": None, "status": None, "fix_prs": [],
             "maintainer_engaged": False, "finding_folder": None, "needs_writeup": True,
-            "excluded_prs": [], "included_prs": [], "closed_without_fix": False}
+            "excluded_prs": [], "included_prs": [], "closed_without_fix": False, "partial_fix_prs": []}
 
 
 def read_issue_list():
@@ -326,7 +362,8 @@ def table(records):
             pattern = ", ".join(r["pattern_tags"]) + (f" ({links})" if links else "")
         else:
             pattern = "—"
-        prs = "<br>".join(pr_label(pr) for pr in r["fix_prs"]) or "—"
+        prs = "<br>".join([pr_label(pr) for pr in r["fix_prs"]]
+                          + [partial_label(pr) for pr in r["partial_fix_prs"]]) or "—"
         rows.append(f"| {r['org']}/{r['repo']} | {env} | {pattern} | {r['severity'] or '—'} "
                     f"| [#{r['number']}]({r['url']}) | {r['status']} | {prs} |")
     return "\n".join(rows)
@@ -381,9 +418,27 @@ def replace_block(text, name, content):
     return pattern.sub(lambda m: m.group(1) + content + m.group(3), text, count=1)
 
 
+def partial_label(pr):
+    who = "ours" if pr["is_ours"] else "community"
+    return f"[#{pr['number']}]({pr['url']}) ({who}, {pr['state']}, partial fix)"
+
+
+def partial_text(rec):
+    """'partial fix merged ([#212](url), ours), issue still open upstream'. Empty when there are none."""
+    if not rec["partial_fix_prs"]:
+        return ""
+    text = ", ".join(f"partial fix {pr['state']} ([#{pr['number']}]({pr['url']}), "
+                     f"{'ours' if pr['is_ours'] else 'community'})" for pr in rec["partial_fix_prs"])
+    return text + (", issue still open upstream" if rec["state"] == "open" else "")
+
+
 def finding_status(rec, today):
-    prs = "; fix PR " + ", ".join(pr_label(pr) for pr in rec["fix_prs"]) if rec["fix_prs"] else "; no fix PR yet"
-    return f"- Status (as of {today}): {rec['status']}{prs}"
+    partial = partial_text(rec)
+    if rec["fix_prs"]:
+        prs = "; fix PR " + ", ".join(pr_label(pr) for pr in rec["fix_prs"])
+    else:
+        prs = "" if partial else "; no fix PR yet"
+    return f"- Status (as of {today}): {rec['status']}" + (f"; {partial}" if partial else "") + prs
 
 
 def write_file(path, text):
@@ -429,6 +484,9 @@ def main():
             continue
         prs = ", ".join(f"#{p['number']} ({'ours' if p['is_ours'] else 'community'}, {p['state']})"
                         for p in rec["fix_prs"]) or "no PR"
+        if rec["partial_fix_prs"]:
+            prs += "; partial fix " + ", ".join(f"#{p['number']} ({'ours' if p['is_ours'] else 'community'}, {p['state']})"
+                                                for p in rec["partial_fix_prs"])
         print(f"{rec['org']}/{rec['repo']}#{rec['number']}: {rec['status']}; {prs}")
 
     if failed:
@@ -442,6 +500,7 @@ def main():
         rec["pattern_slugs"] = rec["pattern_slugs"] or []
         rec["excluded_prs"] = rec["excluded_prs"] or []
         rec["included_prs"] = rec["included_prs"] or []
+        rec["partial_fix_prs"] = rec["partial_fix_prs"] or []
         rec["closed_without_fix"] = bool(rec["closed_without_fix"])
     t = totals(records)
     now = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0)
