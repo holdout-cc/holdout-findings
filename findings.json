@@ -279,7 +279,10 @@
       "maintainer_engaged": true,
       "finding_folder": "findings/huggingface__Repo2RLEnv__agent-conftest-resolves/",
       "needs_writeup": false,
-      "excluded_prs": []
+      "excluded_prs": [
+        220,
+        221
+      ]
     },
     {
       "org": "langchain-ai",
