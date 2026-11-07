@@ -275,7 +275,10 @@
         221
       ],
       "included_prs": [],
-      "closed_without_fix": false
+      "closed_without_fix": false,
+      "partial_fix_prs": [
+        "https://github.com/huggingface/Repo2RLEnv/pull/212"
+      ]
     },
     {
       "org": "langchain-ai",
