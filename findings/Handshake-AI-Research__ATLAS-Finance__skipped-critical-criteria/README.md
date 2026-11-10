@@ -5,7 +5,7 @@
 - Environment: pass@k (`scripts/pass_at_k.py`)
 - Pattern: skipped criteria pass
 - Severity: high
-- Status (as of 2026-11-07): open; no fix PR yet
+- Status (as of 2026-11-10): open; no fix PR yet
 
 ## Summary
 

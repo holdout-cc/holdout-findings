@@ -5,7 +5,7 @@
 - Environment: samples/nano-gpt-data-curation
 - Pattern: failure scores best
 - Severity: medium
-- Status (as of 2026-11-07): open; fix PR [#117](https://github.com/scaleapi/rsi-benchmark/pull/117) (ours, open)
+- Status (as of 2026-11-10): open; fix PR [#117](https://github.com/scaleapi/rsi-benchmark/pull/117) (ours, open)
 
 ## Summary
 

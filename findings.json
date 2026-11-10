@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-07T06:33:08Z",
+  "generated_at": "2026-11-10T17:04:41Z",
   "totals": {
     "filed": 27,
     "fixed": 5,
-    "with_open_pr": 12,
+    "with_open_pr": 13,
     "with_open_pr_ours": 3,
-    "no_pr": 10,
+    "no_pr": 9,
     "maintainer_engaged": 8,
     "needs_writeup": 0,
     "repos": 20,
@@ -347,7 +347,16 @@
       "state": "open",
       "state_reason": null,
       "status": "open",
-      "fix_prs": [],
+      "fix_prs": [
+        {
+          "url": "https://github.com/METR/inspect-agents/pull/181",
+          "number": 181,
+          "is_ours": false,
+          "state": "open",
+          "merged": false,
+          "draft": false
+        }
+      ],
       "maintainer_engaged": false,
       "finding_folder": "findings/METR__inspect-agents__scanner-misses-trimmed-history/",
       "needs_writeup": false,

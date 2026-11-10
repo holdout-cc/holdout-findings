@@ -5,7 +5,7 @@
 - Environment: 2.0 benchmark score (`metrics/benchmark.py`)
 - Pattern: errors dropped from mean
 - Severity: medium
-- Status (as of 2026-11-07): open; fix PR [#674](https://github.com/sierra-research/tau2-bench/pull/674) (community, open)
+- Status (as of 2026-11-10): open; fix PR [#674](https://github.com/sierra-research/tau2-bench/pull/674) (community, open)
 
 ## Summary
 

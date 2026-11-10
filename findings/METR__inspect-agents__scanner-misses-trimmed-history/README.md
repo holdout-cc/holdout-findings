@@ -5,7 +5,7 @@
 - Environment: `reward_hacking_scanner` over `metr_agents` transcripts
 - Pattern: judge sees trimmed history
 - Severity: high
-- Status (as of 2026-11-07): open; no fix PR yet
+- Status (as of 2026-11-10): open; fix PR [#181](https://github.com/METR/inspect-agents/pull/181) (community, open)
 
 ## Summary
 
