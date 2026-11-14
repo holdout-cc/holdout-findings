@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T17:04:41Z",
+  "generated_at": "2026-11-14T15:50:00Z",
   "totals": {
     "filed": 27,
     "fixed": 5,
@@ -929,6 +929,14 @@
         {
           "url": "https://github.com/UiPath/coder_eval/pull/243",
           "number": 243,
+          "is_ours": false,
+          "state": "closed",
+          "merged": false,
+          "draft": false
+        },
+        {
+          "url": "https://github.com/UiPath/coder_eval/pull/260",
+          "number": 260,
           "is_ours": false,
           "state": "open",
           "merged": false,

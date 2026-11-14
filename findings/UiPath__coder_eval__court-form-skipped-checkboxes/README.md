@@ -5,7 +5,7 @@
 - Environment: skillsbench court-form-filling
 - Pattern: skipped tests pass
 - Severity: high
-- Status (as of 2026-11-10): acknowledged; fix PR [#243](https://github.com/UiPath/coder_eval/pull/243) (community, open)
+- Status (as of 2026-11-14): acknowledged; fix PR [#243](https://github.com/UiPath/coder_eval/pull/243) (community, closed), [#260](https://github.com/UiPath/coder_eval/pull/260) (community, open)
 
 ## Summary
 
