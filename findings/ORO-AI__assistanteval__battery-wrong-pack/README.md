@@ -5,7 +5,7 @@
 - Environment: battery-size-known
 - Pattern: purchase not checked
 - Severity: high
-- Status (as of 2026-11-14): open; no fix PR yet
+- Status (as of 2026-11-17): open; no fix PR yet
 
 ## Summary
 

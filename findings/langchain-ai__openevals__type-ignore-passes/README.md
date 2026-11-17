@@ -5,7 +5,7 @@
 - Environment: pyright / mypy code evaluators
 - Pattern: suppression comment passes
 - Severity: medium
-- Status (as of 2026-11-14): open; fix PR [#296](https://github.com/langchain-ai/openevals/pull/296) (community, open)
+- Status (as of 2026-11-17): open; fix PR [#296](https://github.com/langchain-ai/openevals/pull/296) (community, open)
 
 ## Summary
 

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-14T15:50:00Z",
+  "generated_at": "2026-11-17T18:36:17Z",
   "totals": {
     "filed": 27,
-    "fixed": 5,
-    "with_open_pr": 13,
+    "fixed": 6,
+    "with_open_pr": 12,
     "with_open_pr_ours": 3,
     "no_pr": 9,
     "maintainer_engaged": 8,
@@ -17,8 +17,8 @@
     },
     "by_status": {
       "open": 19,
-      "acknowledged": 2,
-      "fixed": 5,
+      "acknowledged": 1,
+      "fixed": 6,
       "closed": 1
     }
   },
@@ -922,9 +922,9 @@
       ],
       "severity": "high",
       "filed": "2026-10-22",
-      "state": "open",
-      "state_reason": null,
-      "status": "acknowledged",
+      "state": "closed",
+      "state_reason": "completed",
+      "status": "fixed",
       "fix_prs": [
         {
           "url": "https://github.com/UiPath/coder_eval/pull/243",
@@ -938,8 +938,8 @@
           "url": "https://github.com/UiPath/coder_eval/pull/260",
           "number": 260,
           "is_ours": false,
-          "state": "open",
-          "merged": false,
+          "state": "merged",
+          "merged": true,
           "draft": false
         }
       ],

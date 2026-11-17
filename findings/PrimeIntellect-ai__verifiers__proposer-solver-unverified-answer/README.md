@@ -5,7 +5,7 @@
 - Environment: proposer_solver
 - Pattern: unverified label
 - Severity: high
-- Status (as of 2026-11-14): open; fix PR [#2965](https://github.com/PrimeIntellect-ai/verifiers/pull/2965) (community, open)
+- Status (as of 2026-11-17): open; fix PR [#2965](https://github.com/PrimeIntellect-ai/verifiers/pull/2965) (community, open)
 
 ## Summary
 
